@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.3.50</Version>
+    <SymbolConfigObject version="3.5.3.50" />
+    <ProjectInfo name="Mehatronika_seminarski" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeUserDef name="T_TP" size="24" nativesize="24" typeclass="Userdef" iecname="TP">
+      <UserDefElement type="T_BOOL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="12" />
+      <UserDefElement type="T_TIME" iecname="ET" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_F_TRIG" size="8" nativesize="8" typeclass="Userdef" iecname="F_TRIG">
+      <UserDefElement type="T_BOOL" iecname="CLK" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="5" />
+    </TypeUserDef>
+    <TypeUserDef name="T_IecSfc_SFCStepType" size="16" nativesize="16" typeclass="Userdef" iecname="IecSfc.SFCStepType">
+      <UserDefElement type="T_BOOL" iecname="x" byteoffset="0" />
+      <UserDefElement type="T_TIME" iecname="t" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="_x" byteoffset="8" />
+      <UserDefElement type="T_TIME" iecname="_t" byteoffset="12" />
+    </TypeUserDef>
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="caj" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj_gotov" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj_iznos" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj_u_proizvodnji" type="T_BOOL" access="ReadWrite" />
+        <Node name="dvaKM" type="T_BOOL" access="ReadWrite" />
+        <Node name="iznos" type="T_REAL" access="ReadWrite" />
+        <Node name="jedanKM" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa_gotova" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa_iznos" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa_u_proizvodnji" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao_gotov" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao_iznos" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao_u_proizvodnji" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino_gotov" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino_iznos" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino_u_proizvodnji" type="T_BOOL" access="ReadWrite" />
+        <Node name="petKM" type="T_BOOL" access="ReadWrite" />
+        <Node name="polaKM" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda1" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda2" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda3" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda4" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda5" type="T_BOOL" access="ReadWrite" />
+        <Node name="proizvod_pokupljen" type="T_BOOL" access="ReadWrite" />
+        <Node name="voda" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="POU">
+        <Node name="Branch0__Init__to__kafa0" type="T_BOOL" access="ReadWrite" />
+        <Node name="Branch1__Init__to__caj0" type="T_BOOL" access="ReadWrite" />
+        <Node name="Branch2__Init__to__kakao0" type="T_BOOL" access="ReadWrite" />
+        <Node name="Branch3__Init__to__kapucino0" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj0" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="caj0__to__caj1" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj1" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="caj1__to__caj2" type="T_BOOL" access="ReadWrite" />
+        <Node name="caj2" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="Init" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kafa0" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kafa0__to__kafa1" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa1" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kafa1__to__kafa2" type="T_BOOL" access="ReadWrite" />
+        <Node name="kafa2" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kakao0" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kakao0__to__kakao1" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao1" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kakao1__to__kakao2" type="T_BOOL" access="ReadWrite" />
+        <Node name="kakao2" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kapucino0" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kapucino0__to__kapucino1" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino1" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kapucino1__to__kapucino2" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino2" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="kapucino2__to__kapucino3" type="T_BOOL" access="ReadWrite" />
+        <Node name="kapucino3" type="T_IecSfc_SFCStepType" access="ReadWrite" />
+        <Node name="okidac_posuda1" type="T_BOOL" access="ReadWrite" />
+        <Node name="okidac_posuda2" type="T_BOOL" access="ReadWrite" />
+        <Node name="okidac_posuda3" type="T_BOOL" access="ReadWrite" />
+        <Node name="okidac_posuda4" type="T_BOOL" access="ReadWrite" />
+        <Node name="okidac_posuda5" type="T_BOOL" access="ReadWrite" />
+        <Node name="okidac_voda" type="T_BOOL" access="ReadWrite" />
+        <Node name="pomocna" type="T_BOOL" access="ReadWrite" />
+        <Node name="posuda1_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="posuda1_timer" type="T_TP" access="ReadWrite" />
+        <Node name="posuda2_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="posuda2_timer" type="T_TP" access="ReadWrite" />
+        <Node name="posuda3_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="posuda3_timer" type="T_TP" access="ReadWrite" />
+        <Node name="posuda4_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="posuda4_timer" type="T_TP" access="ReadWrite" />
+        <Node name="posuda5_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="posuda5_timer" type="T_TP" access="ReadWrite" />
+        <Node name="voda_f_trig" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="voda_timer" type="T_TP" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
